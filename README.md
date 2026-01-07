@@ -33,7 +33,7 @@ A production-grade personal finance management REST API built with Spring Boot 3
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/personal-finance-manager.git
+git clone https://github.com/rhythmraheja/personal-finance-manager.git
 cd personal-finance-manager
 ```
 
@@ -251,8 +251,13 @@ chmod +x financial_manager_tests.sh
 
 For deployed API:
 ```bash
-./financial_manager_tests.sh https://your-app.onrender.com/api
+./financial_manager_tests.sh https://personal-finance-manager-w76m.onrender.com/api
 ```
+
+## 🌐 Live Demo
+
+- **API Base URL**: https://personal-finance-manager-w76m.onrender.com/api
+- **Health Check**: https://personal-finance-manager-w76m.onrender.com/
 
 ## 🧪 Test Coverage
 
