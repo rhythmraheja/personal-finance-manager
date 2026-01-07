@@ -178,7 +178,8 @@ src/main/java/com/finance/manager/
 │   ├── TransactionController.java
 │   ├── CategoryController.java
 │   ├── GoalController.java
-│   └── ReportController.java
+│   ├── ReportController.java
+│   └── HomeController.java
 ├── service/
 │   ├── UserService.java
 │   ├── TransactionService.java
@@ -199,7 +200,12 @@ src/main/java/com/finance/manager/
 │   ├── request/
 │   └── response/
 ├── exception/
-│   └── GlobalExceptionHandler.java
+│   ├── GlobalExceptionHandler.java
+│   ├── ResourceNotFoundException.java
+│   ├── DuplicateResourceException.java
+│   ├── InvalidRequestException.java
+│   ├── ForbiddenException.java
+│   └── UnauthorizedException.java
 └── enums/
     └── TransactionType.java
 ```
@@ -266,11 +272,6 @@ The project maintains 80%+ code coverage with:
 - Controller tests with MockMvc
 - Edge case coverage
 
-## 📄 License
 
-This project is created for educational purposes.
 
-## 👤 Author
-
-Created as part of a coding assignment.
 
