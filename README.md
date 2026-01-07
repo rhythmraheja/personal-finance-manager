@@ -917,9 +917,6 @@ The project maintains 80%+ code coverage with:
 - DTO and Entity tests
 - Exception handling tests
 
-## 📄 License
-
-This project is created for educational and demonstration purposes.
 
 ## 👤 Author
 
