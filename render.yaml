@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: personal-finance-manager
+    env: docker
+    plan: free
+    healthCheckPath: /api/auth/login
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: 8080
+
