@@ -30,18 +30,27 @@ class HomeControllerTest {
                 .andExpect(jsonPath("$.application").value("Personal Finance Manager API"))
                 .andExpect(jsonPath("$.version").value("1.0.0"))
                 .andExpect(jsonPath("$.status").value("running"))
-                .andExpect(jsonPath("$.documentation").exists());
+                .andExpect(jsonPath("$.endpoints").exists());
     }
 
     @Test
-    void home_ReturnsDocumentationEndpoints() throws Exception {
+    void home_ReturnsEndpoints() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.documentation.auth").exists())
-                .andExpect(jsonPath("$.documentation.transactions").exists())
-                .andExpect(jsonPath("$.documentation.categories").exists())
-                .andExpect(jsonPath("$.documentation.goals").exists())
-                .andExpect(jsonPath("$.documentation.reports").exists());
+                .andExpect(jsonPath("$.endpoints.auth").exists())
+                .andExpect(jsonPath("$.endpoints.transactions").exists())
+                .andExpect(jsonPath("$.endpoints.categories").exists())
+                .andExpect(jsonPath("$.endpoints.goals").exists())
+                .andExpect(jsonPath("$.endpoints.reports").exists());
+    }
+
+    @Test
+    void api_ReturnsWelcomeInfo() throws Exception {
+        mockMvc.perform(get("/api"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.application").value("Personal Finance Manager API"))
+                .andExpect(jsonPath("$.version").value("1.0.0"))
+                .andExpect(jsonPath("$.status").value("running"));
     }
 }
 

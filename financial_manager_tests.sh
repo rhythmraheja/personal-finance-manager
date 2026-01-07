@@ -181,7 +181,8 @@ api_test() {
     echo -e "${CYAN}→ $test_name${NC}"
 
     # Build curl command with all options
-    local curl_cmd=(curl -s -w "%{http_code}")
+    # Added -k for SSL compatibility on Windows
+    local curl_cmd=(curl -s -k -w "%{http_code}")
 
     # Add method
     if [ -n "$method" ]; then
